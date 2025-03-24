@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>I love you ❤</title>
+    <style>
+
+body{
+background-color: black;
+}
+
+.heart {
+    position: absolute;
+    top: -50px;
+    font-size: 30px;
+    color: red;
+    opacity: 0;
+    animation: fall 5s infinite;
+}
+img{
+
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    height: 700px; 
+    margin-left: 380px;          /* Ocupa a altura total da tela */
+  }
+
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+    </style>
+</head>
+<body>
+    <img src="https://github.com/RenanWARZ/Bot-o-Toxico/blob/main/meme%20love.jpg?raw=true">
+
+    <script>
+        function createHeart() {
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    heart.innerHTML = '❤'; // Símbolo do coração
+
+    // Posiciona o coração em uma posição aleatória
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.animationDuration = Math.random() * 2 + 3 + 's'; // Tempo aleatório para cada coração
+
+    document.body.appendChild(heart);
+
+    // Remove o coração após a animação
+    setTimeout(() => {
+        heart.remove();
+    }, 5000);
+}
+
+// Cria corações a cada 100ms
+setInterval(createHeart, 80);
+    </script>
+</body>
+</html>
