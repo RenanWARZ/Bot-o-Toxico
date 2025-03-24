@@ -1,0 +1,111 @@
+/* Centraliza todo o conteúdo */
+body {
+    background-image: url(lov.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    flex-direction: column; /* Organiza os elementos em coluna */
+    
+}
+
+.menu {
+    width: 300px;
+    height: 150px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    flex-direction: row;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row; /* Garante que os botões fiquem lado a lado */
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+button {
+   
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    background-color: #ff6f61;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff4d3d;
+}
+
+#moveButton {
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    flex-direction: row;
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+ul li {
+    display: inline-block;
+    margin: 10px;
+}
+
+ul li a {
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    background-color: pink;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* ================================================================ */ 
+.heart {
+    position: absolute;
+    top: -50px;
+    font-size: 30px;
+    color: red;
+    opacity: 0;
+    animation: fall 5s infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
