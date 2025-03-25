@@ -27,41 +27,40 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     flex-direction: row;
 }
-
 .button-container {
     display: flex;
-    flex-direction: row; /* Garante que os botões fiquem lado a lado */
+    flex-direction: row;
+    gap: 15px;
     margin-top: 20px;
     justify-content: center;
     align-items: center;
     width: 100%;
+    position: relative; /* Mantém os botões dentro do layout */
 }
 
-
 button {
-   
     padding: 10px 20px;
     font-size: 16px;
     text-align: center;
-    justify-content: center;
-    justify-items: center;
     background-color: #ff6f61;
     color: white;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #ff4d3d;
+    border: none;
 }
 
 #moveButton {
     position: absolute;
-    cursor: pointer;
-    transition: all 0.3s ease; 
-    flex-direction: row;
+    transition: all 0.3s ease;
 }
+
+#moveButton {
+    position: relative; /* Mantém o botão dentro do layout */
+    transition: all 0.3s ease;
+}
+
+
 
 
 ul {

@@ -1,20 +1,16 @@
 function moveButton() {
     const button = document.getElementById('moveButton');
+    const container = document.querySelector('.menu'); // Mantém dentro do menu
 
-    // Obtendo a largura e altura da tela (body)
-    const screenWidth = window.innerWidth;
-    const screenHeight = window.innerHeight;
-
-    // Calculando posições aleatórias dentro dos limites do body
-    const maxX = screenWidth - button.offsetWidth;
-    const maxY = screenHeight - button.offsetHeight;
+    const containerRect = container.getBoundingClientRect();
+    
+    const maxX = containerRect.width - button.offsetWidth;
+    const maxY = containerRect.height - button.offsetHeight;
 
     const randomX = Math.random() * maxX;
     const randomY = Math.random() * maxY;
 
-    // Movendo o botão para a nova posição
-    button.style.left = `${randomX}px`;
-    button.style.top = `${randomY}px`;
+    button.style.transform = `translate(${randomX}px, ${randomY}px)`;
 }
 
 
@@ -36,4 +32,4 @@ function createHeart() {
 }
 
 // Cria corações a cada 100ms
-setInterval(createHeart, 80);
+setInterval(createHeart, 50);
